@@ -6,7 +6,7 @@ INSERT into Categories(CategoryName,Description) values
 ('Tatlýlar', 'Hede Hödö')
 
 
-SELECT Categories.CategoryName,Products.ProductName FROM Products --altýnda ürün bulunmayan ürünler
+SELECT Categories.CategoryName,Products.ProductName FROM Products --altýnda ürün bulunmayan kategoriler
 RIGHT JOIN Categories												--RÝGHT JOIN
 ON Products.CategoryID = Categories.CategoryID
 WHERE ProductName is null
