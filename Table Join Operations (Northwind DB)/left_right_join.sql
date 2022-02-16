@@ -3,16 +3,16 @@
 
 SELECT * FROM Categories
 INSERT into Categories(CategoryName,Description) values
-('Tatlılar', 'Hede Hödö')
+('TatlÃ½lar', 'Hede HÃ¶dÃ¶')
 
 
-SELECT Categories.CategoryName,Products.ProductName FROM Products --altında ürün bulunmayan kategoriler
-RIGHT JOIN Categories												--RİGHT JOIN
+SELECT Categories.CategoryName,Products.ProductName FROM Products --altÃ½nda Ã¼rÃ¼n bulunmayan Ã¼rÃ¼nler
+RIGHT JOIN Categories												--RÃGHT JOIN
 ON Products.CategoryID = Categories.CategoryID
 WHERE ProductName is null
 
 
-SELECT Categories.CategoryName,Products.ProductName FROM Categories --altında ürün bulunmayan kategoriler
+SELECT Categories.CategoryName,Products.ProductName FROM Categories --altÃ½nda Ã¼rÃ¼n bulunmayan kategoriler
 LEFT JOIN Products														--LEFT JOIN
 ON Products.CategoryID = Categories.CategoryID
 WHERE ProductName is null
